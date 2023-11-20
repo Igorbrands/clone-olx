@@ -34,15 +34,33 @@ function App() {
                   className="w-full rounded-lg px-4 py-3 mt-2 border border-gray-300 bg-inherit"
                 />
               </div>
-              <button className="bg-[#f28000] rounded-[500px] px-6 py-2 text-white w-full">
+              <button
+                type="submit"
+                className="bg-[#f28000] hover:bg-[#df7400] hover:border-[#df7400] rounded-[500px] px-6 py-2 text-white w-full transition-all ease-in-out duration-200"
+              >
                 Continuar
               </button>
             </form>
           </div>
 
           <div>
-            <button className="border border-[#f28000] bg-white rounded-[500px] px-6 py-2 text-[#4a4a4a] w-full">
-              Entrar sem senha
+            <button
+              type="button"
+              className="relative border border-[#f28000] bg-white rounded-[500px] px-6 py-2 text-[#4a4a4a] hover:bg-[#fff3e6] hover:border-[#fff3e6] w-full flex justify-center items-center transition-all ease-in-out duration-200"
+            >
+              <svg
+                className="absolute -translate-y-2/4 left-6 top-2/4"
+                width="24px"
+                height="24px"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="#F28000"
+                  d="M22.75 5.988V18A2.756 2.756 0 0 1 20 20.75H4A2.756 2.756 0 0 1 1.25 18V6.01v-.022A2.756 2.756 0 0 1 4 3.25h16a2.756 2.756 0 0 1 2.75 2.738zm-1.552-.342A1.258 1.258 0 0 0 20 4.75H4c-.563 0-1.044.38-1.198.896L12 12.085l9.198-6.44zm.052 1.794l-8.82 6.174a.75.75 0 0 1-.86 0L2.75 7.44V18c0 .686.564 1.25 1.25 1.25h16c.686 0 1.25-.564 1.25-1.25V7.44z"
+                ></path>
+              </svg>
+
+              <span>Entrar sem senha</span>
             </button>
             <div className="divider text-[#898989] before:bg-[#cfd4dd] before:h-[1px] after:h-[1px] after:bg-[#cfd4dd]">
               Ou conecte com
@@ -57,16 +75,36 @@ function App() {
                 />
               </span>
               <span className="text-white p-4 flex items-center justify-center rounded-full bg-[#3a5998]">
-                <img
-                  src={fbLogo}
-                  width={24}
-                  height={24}
-                  alt="Facebook logo"
-                />
+                <img src={fbLogo} width={24} height={24} alt="Facebook logo" />
               </span>
+            </div>
+
+            <div className="divider before:bg-[#cfd4dd] before:h-[1px] after:h-[1px] after:bg-[#cfd4dd]"></div>
+
+            <div>
+              <span>Não tem uma conta? </span>
+              <a href="">Cadastre-se</a>
             </div>
           </div>
         </div>
+        <div className="flex cursor-pointer">
+			<div className="group h-9 w-full rounded-b bg-[#f5f6f7] hover:bg-[#f7f1fd] shadow-[rgba(153,153,153,0.2)_0px_2px_4px_0px] flex items-center justify-center ">
+
+          <span className="text-sm group-hover:text-[#6e0ad6] group-hover:transition-all ease-in-out duration-200">Preciso de ajuda</span>
+          <svg width="16px" height="16px" viewBox="0 0 24 24">
+            <path
+              fill="#4A4A4A"
+              d="M8.46966991,17.4696699 C8.1767767,17.7625631 8.1767767,18.2374369 8.46966991,18.5303301 C8.76256313,18.8232233 9.23743687,18.8232233 9.53033009,18.5303301 L15.5303301,12.5303301 C15.8232233,12.2374369 15.8232233,11.7625631 15.5303301,11.4696699 L9.53033009,5.46966991 C9.23743687,5.1767767 8.76256313,5.1767767 8.46966991,5.46966991 C8.1767767,5.76256313 8.1767767,6.23743687 8.46966991,6.53033009 L13.9393398,12 L8.46966991,17.4696699 Z"
+            ></path>
+          </svg>
+			</div>
+        </div>
+		<div className="mt-6 flex">
+
+			<span className="block leading-[1.32] text-xs text-[#3c4453]">
+			Ao continuar, você concorda com os Termos de Uso e a Política de Privacidade da OLX e seus parceiros, e em receber comunicações da OLX.
+			</span>
+		</div>
       </div>
     </div>
   );
